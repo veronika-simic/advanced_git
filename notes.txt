@@ -1,0 +1,91 @@
+Centralized and distributed systems
+Git is a distributed VCS
+
+GUI tools
+- they have limitations
+- not always available
+
+Git commands
+git config --global -e --> shows editor with global configuration settings
+git config --global core.autocrlf true --> set cr and lf settings
+git config --help
+git add *.txt --> adds files that have .txt extension
+git add . --> adds everything
+git commit --> without the -m tag opens the editor to write a more specific message
+git commit -am --> skips staging area
+git ls-files --> shows files in the staging area
+git rm filename --> removes a file from the staging area and working directory
+git mv filenameToDelete filenamTOAddEverythingTO --> deletes first file and adds everything to the new file, renaming
+git rm --cached filename -->only removes the file from the SA
+git status -s --> more comprehenisve status, shows files that have been changed
+git diff --staged --> shows what has been changed in the new staged file in comparison to the previous one, not just files, but their content
+git diff --> shows what has been changed in the working directory in comparison to what is staged currently
+git diff HEAD~2 HEAD --name-status --> shows differences between the commits what has or hasn't been modified or deleted
+git difftool --> opens the tool we specify same as git diff
+git difftool --staged
+git log 
+git log --oneline
+git log --oneline --reverse
+git show --> shows content of the latest commit
+git show HEAD~2 --> shows content of the 2 commit + info about commit 
+git show HEAD~2:file.txt --> only shows content of the file
+git show HEAD~3 --name-only --> shows only info not content
+git show HEAD~3 --name-status --> shows status and what has happened with the file in that commit
+git ls-tree HEAD --> show only files, not their contents
+git restore --staged . --> restores everything from the staging area
+git restore --> restores all the files that have been tracked 
+git clean -f --> deletes even the untracked files
+git restore --source=HEAD~1 song1.txt --> restore a file that has been deleted
+git log --stat --> shows what has been changed in commits
+git log --patch --> shows the content of the files that have been changed
+git log --oneline -3 --> shows last 3 commits
+git log --oneline --after="2020-10-20"
+git log --oneline --after="yesterday"
+git log --oneline --grep="GUI" 
+git log --oneline -S"yo" --> gives the list of the commits that have files with that word
+git log --oneline filename --> shows all commits that have changed that file
+git log --oneline -all --> usefull when in detached state
+git log --oneline --all --graph --> shows graph of history
+git checkout HEAD~2
+git bisect start 
+git bisect good or bad
+git bisect reset
+git shortlog --> shows all commits I have made
+git switch branch_name
+git branch -m old_name new_name --> rename branch
+git branch --merged --> shows all merged branches
+
+SA or Index
+- gives us an opportunity to review our changes one more time before commiting them
+- SA is not empty after we commit the changes, it stays the same as it was when we did git add .
+- that's why when we delete something we have to do git add .
+
+Git stores complete snapshots of our project not just differences. It may seem like it's not a very good practice
+becuase of storage but git compresses content. That way our files are retrived faster and efficiently. Does not store duplicate content.
+
+Messages in present
+
+This is the output of git diff --staged
+
+diff --git a/file1.txt b/file1.txt --> what file is changed 
+index 3cf86f5..023c3e7 100644 --> some metadata
+--- a/file1.txt --> previous version of file1.txt
++++ b/file1.txt --> next version of file1.txt
+@@ -9,3 +9,4 @@ file1.txt --> starting from line 9 three lines are shown
+ from
+ sky
+ ocean
++purple
+
+Detached head
+Master points to the last commit. Since we can have multiple branches git uses a special pointer called HEAD
+HEAD points to the current branch we work on
+WHen we create a new branch that is just a pointer to the commit
+Git knows which branch we are working on because of the HEAD pointer
+
+
+Types of merges:
+
+Fastforward merges and 3-way merges
+FF merge is like this
+
