@@ -1,5 +1,8 @@
 Centralized and distributed systems
-Git is a distributed VCS
+Centalized - there is a central server, not very good practice if the server is down
+Distributed - 
+Git is a distributed VCS, cheap, fast, scalable, easy branching system
+
 
 GUI tools
 - they have limitations
@@ -8,11 +11,16 @@ GUI tools
 Git commands
 git config --global -e --> shows editor with global configuration settings
 git config --global core.autocrlf true --> set cr and lf settings
-git config --help
+
+git config --help --> opens browser with info about command
+git config --h --> shorter representation of the command
+
 git add *.txt --> adds files that have .txt extension
 git add . --> adds everything
+
 git commit --> without the -m tag opens the editor to write a more specific message
 git commit -am --> skips staging area
+
 git ls-files --> shows files in the staging area
 git rm filename --> removes a file from the staging area and working directory
 git mv filenameToDelete filenamTOAddEverythingTO --> deletes first file and adds everything to the new file, renaming
