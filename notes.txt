@@ -103,3 +103,6 @@ If the file is in the SA and then we change something then it makes sense to do 
 what has been changed in comparison to the previous file that is staged. 
 
 Then when we stage the file we can use git diff --staged to show what is changed in compariosn to the 
+
+git show HEAD vs git log --oneline --patch -1 
+the difference is that the first command also shows the author
