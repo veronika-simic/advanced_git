@@ -106,3 +106,12 @@ Then when we stage the file we can use git diff --staged to show what is changed
 
 git show HEAD vs git log --oneline --patch -1 
 the difference is that the first command also shows the author
+
+The staging area is great because let's say we change 3 files and add them to SA
+then we decide that two of these files should be part of the next commit  and not this one
+we can do that no problem we just commit one file and leave the others 
+
+
+Little bit of advanced commands
+
+git add -p index.html  
