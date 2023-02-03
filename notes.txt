@@ -162,7 +162,7 @@ for safety reasons. That's why we first:
 
 Merge conflicts 
 - git merge, git stash apply, git cherry-pick, git rebase, git pull
-- when we change the same thing in a file and then try to merge it
+- when something is changed in the same file
 
 Little bit of advanced commands
 git add -p index.html
