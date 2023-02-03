@@ -169,3 +169,4 @@ git add -p index.html
 git show -s --format=%B SHA --> this command shows full commit message
 git merge --abort
 git rebase --abort
+git branch | grep -v "develop" | grep -v "master" | xargs git branch -D
