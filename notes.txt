@@ -133,11 +133,33 @@ Two types of branches
 - short-lived - created for specific purpose, deleted after integrating
               - bug fixes, refractoring, experimenting
 
-there is no perfect branchin model
+there is no perfect branching model
 
+
+Pull requests
+- without it everything would be merged immediately, this way we invite the second pair of eyes to review the our code
+- allow to contribute code to other repos
+- always based on branches not on commits 
+- create a new branch when doing the pull requests
+
+Fork 
+-copy of original repository
+
+
+Why even fork? 
+
+Because we do not have access to the original repository.
+First we find a repo we would like to improve. If clone it and the lik to push changes it will not be possible
+for safety reasons. That's why we first:
+1. Fork Janes repo
+2. Clone it
+3. make new branch
+4. make changes, commit  them
+5. push to the fork
+6. pull request is issued
+7. if its ok the owner of repo will merge it
 
 
 Little bit of advanced commands
-
 git add -p index.html
 git show -s --format=%B SHA --> this command shows full commit message
