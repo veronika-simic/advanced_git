@@ -112,6 +112,32 @@ then we decide that two of these files should be part of the next commit  and no
 we can do that no problem we just commit one file and leave the others 
 
 
+Perfect commit message
+
+Subject + Body
+Subject = summary of what happened
+Body = more details of what happened. What is the reason for change? What is different now than before?
+
+Branching strategies
+depends on the team convention
+
+"always be integrating" model
+- very few branches, small commits, high-quality testing and QA standars
+- not very common
+
+Two types of branches
+- long-running - exist through the complete lifetime of the project, often they mirror stages in dev life cycle
+               - main, master, develop,
+               - develop branches represent different releases of our project
+               - there is no direct commits to these branches, they are only added through merge or rebase
+- short-lived - created for specific purpose, deleted after integrating
+              - bug fixes, refractoring, experimenting
+
+there is no perfect branchin model
+
+
+
 Little bit of advanced commands
 
-git add -p index.html  
+git add -p index.html
+git show -s --format=%B SHA --> this command shows full commit message
