@@ -164,6 +164,22 @@ Merge conflicts
 - git merge, git stash apply, git cherry-pick, git rebase, git pull
 - when something is changed in the same file
 
+
+Merge or rebase
+-goal of merge is to combaine latest integrations 
+- merge commit is made by git and it's like a knot that ties two branches
+
+rebase is not better or worse than merge
+if we wont to have a work history to look linear use rebase instead
+it rewrites commit  history
+what happens is: 
+git rebase branchB
+
+this branch will then get moved into main branch, in place after the common ancestor
+while all the commits from the main branch after that common ancestor are stored somewhere safe
+and later in front of the last commit from branch b
+
+
 Little bit of advanced commands
 git add -p index.html
 git show -s --format=%B SHA --> this command shows full commit message
