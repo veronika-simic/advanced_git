@@ -182,7 +182,6 @@ and later in front of the last commit from branch b
 Do not rebase on commits you already pushed to a remote repo, instead use it for cleaning up your local commit history
 Do not rebase on a branch that is public, if someone else is working on it
 
-
 When you rebase stuff, 
 you’re abandoning existing commits and creating new ones that are similar but different. 
 If you push commits somewhere and others pull them down and base work on them, 
@@ -195,4 +194,13 @@ git add -p index.html
 git show -s --format=%B SHA --> this command shows full commit message
 git merge --abort
 git rebase --abort
-git branch | grep -v "develop" | grep -v "master" | xargs git branch -D
+git branch | grep -v "develop" | grep -v "main" | xargs git branch -D
+
+Git branches
+- local branch tracks remote branch
+- git branch --track feature/login origin/feature/login --> create a local branch that tracks remote branch
+
+
+
+Git Lense 
+- when we commit  we only change status of local repository
